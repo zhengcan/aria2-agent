@@ -2,7 +2,9 @@ name := "aria2-agent"
 
 version := "1.0"
 
-scalaVersion := "2.12.2"
+scalaVersion := "2.11.11"
+
+javacOptions ++= Seq("-encoding", "UTF-8")
 
 lazy val aria2Agent = ProjectRef(file("."), "aria2-agent")
 
