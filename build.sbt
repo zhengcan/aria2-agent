@@ -4,6 +4,8 @@ version := "1.0"
 
 scalaVersion := "2.12.2"
 
+javacOptions ++= Seq("-encoding", "UTF-8")
+
 lazy val aria2Agent = ProjectRef(file("."), "aria2-agent")
 
 libraryDependencies ++= Seq(
