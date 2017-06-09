@@ -15,6 +15,11 @@ public interface Aria2Session {
   Aria2 getAria2();
 
   /**
+   * Close the aria2 session
+   */
+  void close();
+
+  /**
    * Add a new download task
    *
    * @param uri The remote url to download

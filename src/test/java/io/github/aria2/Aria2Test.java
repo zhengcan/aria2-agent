@@ -84,7 +84,7 @@ class Aria2Test {
       } catch (Exception e) {
         fail(e);
       }
-    }).toCompletableFuture().get(5, TimeUnit.SECONDS);
+    }).toCompletableFuture().join();
 
     Thread.sleep(30000);
   }

@@ -45,7 +45,18 @@ public class Aria2SessionImpl implements Aria2Session, WebSocketTextListener {
 
   @Override
   public Aria2 getAria2() {
-    return aria2;
+    return this.aria2;
+  }
+
+  @Override
+  public void close() {
+    if (this.webSocket != null) {
+      try {
+        this.webSocket.close();
+      } catch (IOException ignore) {
+        // Ignore
+      }
+    }
   }
 
   @Override
